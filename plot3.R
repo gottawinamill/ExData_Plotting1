@@ -13,7 +13,7 @@ plot3 <- function(){
 
 	# for plot 3 we just need the date, time and sub_metering 1,2,3 cols 
 	# so strip out everything else using colClasses to reduce memory
-	DT <- read.table("hpc.txt", 
+	DT <- read.table("household_power_consumption.txt", 
 				colClasses=c("customDate", "character", rep("NULL",4), rep("numeric",3)),
 				sep=';', header=TRUE, na.strings="?")  
 	
